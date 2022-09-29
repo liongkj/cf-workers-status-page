@@ -26,10 +26,11 @@ monitors:
 
   - id: Frontend
     name: Web Portal
-    description: 'What you see'
+    description: 'Solarsens web portal'
     url: 'https://solarsens.avaasia.co/en'
     method: GET
     expectStatus: 200
+    followRedirect: true
     linkable: true # allows the title to be a link, default=true
 
   - id: thingsboard

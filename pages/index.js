@@ -1,13 +1,13 @@
+import Head from 'flareact/head'
 import { Store } from 'laco'
 import { useStore } from 'laco-react'
-import Head from 'flareact/head'
 
-import { getKVMonitors, useKeyPress } from '../src/functions/helpers'
 import config from '../config.yaml'
 import MonitorCard from '../src/components/monitorCard'
 import MonitorFilter from '../src/components/monitorFilter'
 import MonitorStatusHeader from '../src/components/monitorStatusHeader'
 import ThemeSwitcher from '../src/components/themeSwitcher'
+import { getKVMonitors, useKeyPress } from '../src/functions/helpers'
 
 const MonitorStore = new Store({
   monitors: config.monitors,
@@ -93,18 +93,6 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
             Powered by{' '}
             <a href="https://workers.cloudflare.com/" target="_blank">
               Cloudflare Workers{' '}
-            </a>
-            &{' '}
-            <a href="https://flareact.com/" target="_blank">
-              Flareact{' '}
-            </a>
-          </div>
-          <div>
-            <a
-              href="https://github.com/eidam/cf-workers-status-page"
-              target="_blank"
-            >
-              Get Your Status Page
             </a>
           </div>
         </div>
