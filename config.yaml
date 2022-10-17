@@ -35,6 +35,12 @@ monitors:
 
   - id: thingsboard
     name: Data Acq Server
-    url: 'https://monitoring.avaasia.co'
+    url: 'https://monitoring.avaasia.co/api/user/devices'
     method: GET
-    expectStatus: 200
+    expectStatus: 401
+    
+  - id: thingsboard2
+    name: Data Acq Server2
+    url: 'https://gs-monitoring.avaasia.co/api/user/devices'
+    method: GET
+    expectStatus: 401
